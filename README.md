@@ -6,7 +6,7 @@ Each English word is paired with its translation, romanized if needed, and score
 
 ## Live Site
 
-**[View the interactive explorer →](https://cooolersam.github.io/Linder/)**
+**[View the interactive explorer →](https://samarth-rao.github.io/Linder/)**
 
 ## Key Findings
 
