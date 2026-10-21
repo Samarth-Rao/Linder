@@ -13,7 +13,8 @@ os.makedirs(WEB_DATA, exist_ok=True)
 with open(os.path.join(BASE_DIR, "summary.json")) as f:
     summary = json.load(f)
 
-# Filter out Bengali (only 316 pairs, inflated scores)
+# Drop languages with < 1000 pairs (Bengali, Marathi, Odia, Burmese): too few
+# pairs for a reliable average (Bengali, at 316 pairs, also had inflated scores)
 summary = [s for s in summary if s["n"] >= 1000]
 summary.sort(key=lambda x: x["avg"], reverse=True)
 

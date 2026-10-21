@@ -5,7 +5,8 @@ Cross-language similarity comparison.
 Uses English as a pivot: for any two languages, finds English words
 that have translations in both, then compares the romanized translations.
 
-Outputs a 43x43 similarity matrix as JSON for the web frontend.
+Outputs an NxN similarity matrix (one row/column per language in
+batch.LANGUAGES, currently 96) as JSON for the web frontend.
 
 Usage:
     python cross_compare.py [--limit N] [--min-overlap N]

@@ -99,13 +99,19 @@ function showOverview() {
 async function init() {
     const resp = await fetch(`${DATA_BASE}/summary.json`);
     summaryData = await resp.json();
-    document.getElementById("lang-count").textContent = summaryData.length;
+    document.getElementById("table-lang-count").textContent = summaryData.length;
     // Pre-load cross matrix (needed for sidebar family comparisons)
     try {
         const crossResp = await fetch(`${DATA_BASE}/cross_matrix.json`);
         crossData = await crossResp.json();
         crossData.languages = crossData.languages.filter(l => l.code !== "bn");
         crossData.pairs = crossData.pairs.filter(p => p.a !== "bn" && p.b !== "bn");
+        // Hero and heatmap counts reflect every language shown in the cross-language views
+        const nCross = crossData.languages.length;
+        document.getElementById("lang-count").textContent = nCross;
+        document.getElementById("heatmap-lang-count").textContent = nCross;
+        document.getElementById("family-count").textContent =
+            new Set(crossData.languages.map(l => l.family)).size;
     } catch (e) { console.warn("Cross matrix not available:", e); }
     loadAndRenderNetwork();
 }

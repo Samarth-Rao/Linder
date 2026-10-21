@@ -21,8 +21,8 @@
       <section class="hero">
         <h1>Cross-Language Similarity</h1>
         <p class="hero-sub">
-          Measuring how alike <strong id="lang-count">50</strong> languages look
-          and sound across <strong>20 language families</strong> — comparing
+          Measuring how alike <strong id="lang-count">95</strong> languages look
+          and sound across <strong id="family-count">27</strong> <strong>language families</strong> — comparing
           every language to every other through orthographic and phonetic
           analysis of translation pairs.
         </p>
@@ -93,7 +93,7 @@
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="4" stroke="#6baed6" stroke-width="2" fill="none"/><line x1="6" y1="16" x2="42" y2="16" stroke="#6baed6" stroke-width="1.5"/><line x1="6" y1="26" x2="42" y2="26" stroke="#6baed6" stroke-width="1.5" opacity="0.5"/><line x1="6" y1="36" x2="42" y2="36" stroke="#6baed6" stroke-width="1.5" opacity="0.5"/><line x1="20" y1="6" x2="20" y2="42" stroke="#6baed6" stroke-width="1.5" opacity="0.5"/></svg>
             </div>
             <h3>Data Table</h3>
-            <p>Sortable table of all 50 languages with detailed similarity metrics.</p>
+            <p>Sortable table of all <span id="table-lang-count">92</span> ranked languages with detailed similarity metrics.</p>
           </div>
 
           <div class="nav-card" onclick="showView('method')">
@@ -112,7 +112,7 @@
       <section class="view-header">
         <button class="back-btn" onclick="showOverview()">&#8592; Back</button>
         <h1>Every Language vs Every Language</h1>
-        <p class="section-desc">All 50 languages compared pairwise. English serves as a pivot for non-English pairs. Hover for details.</p>
+        <p class="section-desc">All <span id="heatmap-lang-count">95</span> languages compared pairwise. English serves as a pivot for non-English pairs. Hover for details.</p>
       </section>
       <section class="section">
         <div class="heatmap-controls">
@@ -249,9 +249,10 @@
 
         <h2>Overview</h2>
         <p>Linder measures how alike words for the same concept look and sound across languages. It compares 96 languages across 27 language families by scoring English-foreign translation pairs on orthographic and phonetic similarity, then extends this to cross-language comparison using English as a pivot.</p>
+        <p>Not every language appears in every view. The English-similarity rankings, family averages and table only include the 92 languages with at least 1,000 translation pairs; Bengali, Marathi, Odia and Burmese have too few pairs for a reliable average. Marathi, Odia and Burmese still appear in the cross-language matrix and network (95 languages). Bengali (316 pairs) is left out of those too and is only available in Word Lookup.</p>
 
         <h2>Data Sources</h2>
-        <p>Translation pairs come from three open datasets:</p>
+        <p>Translation pairs come from these open sources:</p>
         <ul>
           <li><strong>MUSE</strong> (Meta Research) — bilingual dictionaries for 44 languages, up to 100k+ pairs each. Space/tab-separated word pairs. CC-BY-NC license.</li>
           <li><strong>PanLex</strong> (Long Now Foundation) — lexical translations for 24 additional languages, extracted via shared meaning IDs from the HuggingFace <code>cointegrated/panlex-meanings</code> dataset. CC0 license.</li>
@@ -347,7 +348,7 @@
         </ul>
 
         <h2>Source Code</h2>
-        <p>All code, data pipelines, and this website are open source at <a href="https://github.com/Cooolersam/Linder">github.com/Cooolersam/Linder</a>.</p>
+        <p>All code, data pipelines, and this website are open source at <a href="https://github.com/Samarth-Rao/Linder">github.com/Samarth-Rao/Linder</a>.</p>
 
       </section>
     </main>
@@ -409,7 +410,7 @@
     </main>
 
     <footer>
-      <p><a href="https://github.com/Cooolersam/Linder">GitHub</a></p>
+      <p><a href="https://github.com/Samarth-Rao/Linder">GitHub</a></p>
     </footer>
 
     <script src="app.js"></script>
