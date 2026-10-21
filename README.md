@@ -1,6 +1,6 @@
 # Linder
 
-Measuring orthographic and phonetic similarity between English and 43 languages across 17 language families.
+Measuring orthographic and phonetic similarity between English and 96 languages across 27 language families.
 
 Each English word is paired with its translation, romanized if needed, and scored on how alike the two look and sound in Latin script.
 
@@ -17,9 +17,9 @@ Each English word is paired with its translation, romanized if needed, and score
 | Slavic | 0.36 | Russian, Polish, Czech, Croatian, Bulgarian, etc. |
 | Semitic | 0.19 | Arabic, Hebrew |
 
-- **53% of German-English** translation pairs score ≥0.7 (high similarity)
+- **18% of German-English** translation pairs score ≥0.7 (high similarity)
 - **Vietnamese** ranks highest overall (0.69) due to heavy Latin-script borrowing
-- **Arabic** and **Hebrew** rank lowest — almost no orthographic overlap
+- **Arabic** and **Hebrew** rank near the bottom (0.18, 0.20) — almost no orthographic overlap
 - **Chinese** is bimodal: words are either phonetically borrowed (high) or completely different (low)
 
 ## How It Works
@@ -44,7 +44,7 @@ python main.py temperature temperatur
 # Run a single language (10k pairs)
 python batch.py --lang fr
 
-# Run all 43 languages
+# Run all 96 languages
 python batch.py --lang all --limit 10000
 
 # Generate charts
@@ -60,7 +60,7 @@ python export_web_data.py
 python batch.py --list
 ```
 
-Afrikaans, Albanian, Arabic, Bengali, Bosnian, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, Estonian, Filipino, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Latvian, Lithuanian, Macedonian, Malay, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Tamil, Thai, Turkish, Ukrainian, Vietnamese
+Afrikaans, Albanian, Amharic, Arabic, Armenian, Azerbaijani, Basque, Belarusian, Bengali, Bosnian, Bulgarian, Burmese, Catalan, Chichewa, Chinese, Croatian, Czech, Danish, Dutch, Esperanto, Estonian, Filipino, Finnish, French, Galician, Georgian, German, Greek, Gujarati, Hausa, Hawaiian, Hebrew, Hindi, Hungarian, Icelandic, Igbo, Indonesian, Irish, Italian, Japanese, Kannada, Kazakh, Khmer, Kinyarwanda, Korean, Kurdish, Kyrgyz, Lao, Latin, Latvian, Lithuanian, Macedonian, Malay, Malayalam, Maltese, Maori, Marathi, Mongolian, Nepali, Norwegian, Norwegian Bokmal, Occitan, Odia, Pashto, Persian, Polish, Portuguese, Punjabi, Romanian, Russian, Samoan, Sardinian, Scottish Gaelic, Serbo-Croatian, Shona, Sinhala, Slovak, Slovenian, Somali, Spanish, Swahili, Swedish, Tajik, Tamil, Telugu, Thai, Tigrinya, Turkish, Ukrainian, Urdu, Uzbek, Vietnamese, Welsh, Yiddish, Yoruba, Zulu
 
 ## Setup
 
